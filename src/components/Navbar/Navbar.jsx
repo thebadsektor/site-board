@@ -66,9 +66,6 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h1 className="navbar-title">
-        <span className="icon-text">
-         <FaEthereum style={{ marginRight: '10px' }} />
-        </span>
         Site Board
       </h1>
       <div className="navbar-buttons">
