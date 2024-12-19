@@ -12,7 +12,6 @@ import {BillboardPage} from './components/BillboardPage'
 import {MBoard} from './components/MBoard/MBoard'
 import {customDebug} from './utils/custom.debug'
 import Navbar from './components/Navbar'
-import WalletConnect from './components/WalletConnect'
 
 const App = () => {
   const {
@@ -40,7 +39,6 @@ const App = () => {
   return (
     <div className='relative flex flex-col w-screen h-screen'>
       <Navbar />
-      <WalletConnect />
       <Menu/>
       <div className='relative w-full h-[calc(100vh-3rem)]'>
         <BillboardPage/>
