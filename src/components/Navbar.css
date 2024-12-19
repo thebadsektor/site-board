@@ -1,0 +1,37 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #282c34;
+    color: white;
+  }
+  
+  .navbar-title {
+    font-size: 24px;
+  }
+  
+  .navbar-buttons {
+    display: flex;
+  }
+  
+  .connect-button {
+    padding: 10px 20px;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .connect-button:hover {
+    background-color: #21a1f1;
+  }
+  
+  .wallet-address {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #61dafb;
+  }
