@@ -2,6 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { ethers } from 'ethers'; // Ensure ethers is imported
 import './Navbar.css'; // Assuming you have a CSS file for styling
 
+const NETWORK_NAMES = {
+  1: "Ethereum Mainnet",
+  3: "Ropsten Testnet",
+  4: "Rinkeby Testnet",
+  5: "Goerli Testnet",
+  42: "Kovan Testnet",
+  11155111: "Sepolia Testnet",
+};
+
 const Navbar = () => {
   const [walletAddress, setWalletAddress] = useState('');
   const [network, setNetwork] = useState(''); // State for current network
@@ -31,9 +40,12 @@ const Navbar = () => {
 
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     const { chainId } = await provider.getNetwork(); // Get current network
+
+    const networkName = NETWORK_NAMES[chainId] || `Unknown Network (${chainId})`;
+    setNetwork(networkName); // Update network state
+
     const balance = await provider.getSigner().getBalance(); // Get wallet balance
-    setNetwork(chainId); // Update network state
-    setBalance(ethers.utils.formatEther(balance)); // Update balance state
+    setBalance(parseFloat(ethers.utils.formatEther(balance)).toFixed(4)); // Update balance state
   };
 
   const disconnectWallet = () => {
