@@ -11,7 +11,7 @@ import {useZustand} from './store/useZustand'
 import {BillboardPage} from './components/BillboardPage'
 import {MBoard} from './components/MBoard/MBoard'
 import {customDebug} from './utils/custom.debug'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
 
 const App = () => {
   const {

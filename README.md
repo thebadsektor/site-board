@@ -12,5 +12,10 @@
 Install node 16++
 
 npm install --legacy-peer-deps
+
+npm install ethers@5 --legacy-peer-deps
+
+npm install react-icons --legacy-peer-deps
+
 npm run dev
 ```

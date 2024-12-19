@@ -20,7 +20,7 @@
   .connect-button,
   .dropdown-button {
     padding: 10px 20px;
-    background-color: #61dafb;
+    background-color: #2ecc71;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -30,7 +30,7 @@
   
   .connect-button:hover,
   .dropdown-button:hover {
-    background-color: #21a1f1;
+    background-color: #27ae60;
   }
   
   .wallet-address {
@@ -72,3 +72,20 @@
     background-color: #c9302c;
   }
   
+  .icon-text {
+    display: flex;
+    align-items: center; /* Ensures icon and text are aligned */
+  }
+
+  .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between items */
+  }
+  
+  .disconnect-container {
+    display: flex;
+    padding-top: 30px;
+    padding-left: 30px;
+    justify-content: flex-end; /* Push the button to the right */
+  }
